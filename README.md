@@ -1,1 +1,1 @@
-# Template environment for app development in ES6 Babel using SASS
+# Template environment for app development in Babel ES6 using Sass, Node, and express
