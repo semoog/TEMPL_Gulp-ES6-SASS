@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/semoog/googleAPI_Calendar.git"
+    "url": "git+https://github.com/semoog/TEMPL_Gulp-ES6-SASS.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/semoog/googleAPI_Calendar/issues"
+    "url": "https://github.com/semoog/TEMPL_Gulp-ES6-SASS/issues"
   },
-  "homepage": "https://github.com/semoog/googleAPI_Calendar#readme",
+  "homepage": "https://github.com/semoog/TEMPL_Gulp-ES6-SASS#readme",
   "devDependencies": {
     "babel": "^6.5.2",
     "babel-core": "^6.10.4",
