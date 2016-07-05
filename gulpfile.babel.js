@@ -8,6 +8,7 @@ import uglify from 'gulp-uglify'
 import babel from 'gulp-babel';
 import plumber from 'gulp-plumber';
 import rename from 'gulp-rename';
+import livereload from 'gulp-livereload';
 
 const dirs = {
   src: './src',
@@ -30,6 +31,22 @@ gulp.task('sass', function(done) {
   gulp.src(sassPaths.src)
     .pipe(sass())
     .on('error', sass.logError)
+    .pipe(autoprefixer(
+      {
+        browsers: [
+          '> 1%',
+          'last 2 versions',
+          'firefox >= 4',
+          'safari 7',
+          'safari 8',
+          'IE 8',
+          'IE 9',
+          'IE 10',
+          'IE 11'
+        ],
+        cascade: false
+      }
+    ))
     .pipe(minifyCss({
       keepSpecialComments: 0
     }))
@@ -37,6 +54,11 @@ gulp.task('sass', function(done) {
       extname: '.min.css'
     }))
     .pipe(gulp.dest(sassPaths.dest))
+    .pipe(livereload(
+      {
+        start: true
+      }
+    ))
     .on('end', done);
 });
 
@@ -64,6 +86,7 @@ gulp.task("babel", function() {
 // });
 
 gulp.task('watch', function() {
+  livereload.listen();
   gulp.watch(jsPaths.src, ['babel']);
   gulp.watch(sassPaths.src, ['sass']);
 });
