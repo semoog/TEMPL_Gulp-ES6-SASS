@@ -2,7 +2,7 @@
 
 To use, run `gulp` to transpile the code and `nodemon` to run the node server.
 
-Public facing code will be transpiled into a 'build' directory.
+Public facing code will be transpiled into the 'build' directory as an uglified bundle.
 
 ___
 
